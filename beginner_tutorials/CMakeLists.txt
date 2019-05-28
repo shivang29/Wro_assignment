@@ -57,6 +57,7 @@ add_message_files(
 add_service_files(
   FILES
   AddTwoInts.srv
+  OperationOnTwoInts.srv
 )
 
 ## Generate actions in the 'action' folder
@@ -215,12 +216,11 @@ add_executable(add_two_ints_client src/add_two_ints_client.cpp)
 target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
 add_dependencies(add_two_ints_client beginner_tutorials_gencpp)
 
-add_executable(sub_two_ints_server src/sub_two_ints_server.cpp)
-target_link_libraries(sub_two_ints_server ${catkin_LIBRARIES})
-add_dependencies(sub_two_ints_server beginner_tutorials_gencpp)
+add_executable(operate_two_ints_server src/operate_two_ints_server.cpp)
+target_link_libraries(operate_two_ints_server ${catkin_LIBRARIES})
+add_dependencies(operate_two_ints_server beginner_tutorials_gencpp)
 
-add_executable(sub_two_ints_client src/sub_two_ints_client.cpp)
-target_link_libraries(sub_two_ints_client ${catkin_LIBRARIES})
-add_dependencies(sub_two_ints_client beginner_tutorials_gencpp)
-
+add_executable(operate_two_ints_client src/operate_two_ints_client.cpp)
+target_link_libraries(operate_two_ints_client ${catkin_LIBRARIES})
+add_dependencies(operate_two_ints_client beginner_tutorials_gencpp)
 
