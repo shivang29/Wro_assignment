@@ -22,20 +22,20 @@ public:
 	virtual ~HuskyHighlevelController();
 
 private:
+
+	bool readParameters();
 	
-	void scanCallback(const sensor_msgs::LaserScan& meg);
+	void topicCallback(const sensor_msgs::LaserScan& message);
   
 	 
-  //! ROS node handle.
+  
   ros::NodeHandle& nodeHandle_;
 
-  //! ROS topic subscriber.
-  ros::Subscriber subscriber_;
+  
+  ros::Subscriber scanSubscriber_;
 
-  //! ROS topic name to subscribe to.
-  std::string topic_name_;
-
-  std::int32_t topic_size_queue_; 
+ 
+  std::string scanTopic_;
 
 
 };
