@@ -1,0 +1,12 @@
+
+<launch>
+
+  <arg name="config_file" default="$(find processing)/cfg/config.yaml"/>
+
+  <node pkg="processing" type="processing" name="processing" output="screen">
+    <rosparam command="load" file="$(arg config_file)" />
+  </node>
+
+</launch>
+
+

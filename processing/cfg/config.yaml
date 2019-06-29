@@ -1,0 +1,13 @@
+## calibration details for approximate distance estimation of box
+focal_length: 10
+known_width: 0.48
+
+## thresholding paramters for box
+# lower threshold
+low_b: 204
+low_g: 102
+low_r: 0
+# Upper threshold
+high_b: 255
+high_g: 255
+high_r: 255
